@@ -8,5 +8,5 @@ app = FastAPI()
 def index():
     return {"res": "Welcome to the PhsiPy-API"}
 
-
+# Electricity Route
 app.include_router(Electricity_router, prefix="/electricity")
