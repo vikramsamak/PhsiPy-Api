@@ -1,11 +1,12 @@
-from typing import Union
-
 from fastapi import FastAPI
+
+from Routes.ElectricityRouter import Electricity_router
 
 app = FastAPI()
 
-
 @app.get("/")
-def read_root():
+def index():
     return {"res": "Welcome to the PhsiPy-API"}
 
+
+app.include_router(Electricity_router, prefix="/electricity")
