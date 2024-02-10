@@ -1,6 +1,6 @@
 from fastapi import APIRouter
-from Classes.Electricity import ElectricityClasses
-from Controllers.Electricity import ElectricityControllers
+from Classes import ElectricityClasses
+from Controllers import ElectricityControllers
 
 
 Electricity_router = APIRouter()

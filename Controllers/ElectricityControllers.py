@@ -1,4 +1,4 @@
-from Dictionaries.Electricity import ElectricityDictionary
+from Dictionaries import ElectricityDictionary
 
 
 def get_force_electrostatics(req):
