@@ -2,13 +2,9 @@ from fastapi import FastAPI
 from fastapi.openapi.utils import get_openapi
 from Routes.ElectricityRoutes import Electricity_router
 from Routes.SubAutomaticRoutes import SubAutomatic_Router
+from Routes.NlmRoutes import NLMRouter
 
 app = FastAPI()
-
-
-@app.get("/", tags=["Welcome"])
-def index():
-    return {"res": "Welcome to the PhsiPy-API"}
 
 
 def custom_openapi():
@@ -28,6 +24,11 @@ def custom_openapi():
     return app.openapi_schema
 
 
+@app.get("/", tags=["Welcome"])
+def index():
+    return {"res": "Welcome to the PhsiPy-API"}
+
+
 app.openapi = custom_openapi
 
 # Electricity Route
@@ -35,3 +36,6 @@ app.include_router(Electricity_router, prefix="/electricity")
 
 # SubAutomatic Route
 app.include_router(SubAutomatic_Router, prefix="/subautomatic")
+
+# NLM Routes
+app.include_router(NLMRouter, prefix="/nlm")
