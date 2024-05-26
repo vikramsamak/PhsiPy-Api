@@ -3,6 +3,8 @@ from fastapi.openapi.utils import get_openapi
 from Routes.ElectricityRoutes import Electricity_router
 from Routes.SubAutomaticRoutes import SubAutomatic_Router
 from Routes.NlmRoutes import NLMRouter
+import uvicorn
+from os import getenv
 
 app = FastAPI(
     title="PhsiPy API",
@@ -43,3 +45,7 @@ app.include_router(SubAutomatic_Router, prefix="/subautomatic")
 
 # NLM Routes
 app.include_router(NLMRouter, prefix="/nlm")
+
+if __name__ == "__main__":
+    port = int(getenv("PORT", 8000))
+    uvicorn.run("main:app", host="0.0.0.0", port=port, reload=True)
