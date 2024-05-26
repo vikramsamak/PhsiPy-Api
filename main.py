@@ -4,7 +4,11 @@ from Routes.ElectricityRoutes import Electricity_router
 from Routes.SubAutomaticRoutes import SubAutomatic_Router
 from Routes.NlmRoutes import NLMRouter
 
-app = FastAPI()
+app = FastAPI(
+    title="PhsiPy API",
+    description="Rest API for making scientific calculations easy.",
+    version="1.0.0",
+)
 
 
 def custom_openapi():
