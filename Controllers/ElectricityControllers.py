@@ -33,7 +33,7 @@ def get_resistance(req: ResistanceRequest) -> GenericResponse[float]:
 def get_current(req: CurrentRequest) -> GenericResponse[float]:
     current = Electricity.current(req.voltage, req.resistance)
     return GenericResponse(
-        Defintion=ElectricityDictionary.ElectricityDict["current"],
+        Definition=ElectricityDictionary.ElectricityDict["current"],
         Given={"Voltage": req.voltage, "Resistance": req.resistance},
         Result=current,
     )
@@ -42,7 +42,7 @@ def get_current(req: CurrentRequest) -> GenericResponse[float]:
 def get_voltage(req: VoltageRequest) -> GenericResponse[float]:
     voltage = Electricity.voltage(req.current, req.resistance)
     return GenericResponse(
-        Defintion=ElectricityDictionary.ElectricityDict["voltage"],
+        Definition=ElectricityDictionary.ElectricityDict["voltage"],
         Given={"Current": req.current, "Resistance": req.resistance},
         Result=voltage,
     )
@@ -51,7 +51,7 @@ def get_voltage(req: VoltageRequest) -> GenericResponse[float]:
 def get_power(req: PowerRequest) -> GenericResponse[float]:
     power = Electricity.power(req.voltage, req.current)
     return GenericResponse(
-        Defintion=ElectricityDictionary.ElectricityDict["power"],
+        Definition=ElectricityDictionary.ElectricityDict["power"],
         Given={"Voltage": req.voltage, "Current": req.current},
         Result=power,
     )
