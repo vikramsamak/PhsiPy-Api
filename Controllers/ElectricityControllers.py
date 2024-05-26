@@ -25,7 +25,7 @@ def get_resistance(req: ResistanceRequest) -> GenericResponse[float]:
     resistance = Electricity.resistance(req.voltage, req.current)
     return GenericResponse(
         Definition=ElectricityDictionary.ElectricityDict["resistance"],
-        Given={"voltage": req.voltage, "current": req.current},
+        Given={"Voltage": req.voltage, "Current": req.current},
         Result=resistance,
     )
 
