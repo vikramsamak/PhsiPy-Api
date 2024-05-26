@@ -31,8 +31,3 @@ def voltage(req: ElectricityClasses.Voltage):
 @Electricity_router.post("/power", tags=ELECTRICITY_TAGS)
 def power(req: ElectricityClasses.Power):
     return ElectricityControllers.get_power(req)
-
-
-@Electricity_router.post("/ohms_law", tags=ELECTRICITY_TAGS)
-def ohms_law(req: ElectricityClasses.Power):
-    return ElectricityControllers.get_ohms_law(req)
