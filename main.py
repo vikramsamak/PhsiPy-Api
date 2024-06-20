@@ -5,11 +5,26 @@ from Routes.SubAutomaticRoutes import SubAutomatic_Router
 from Routes.NlmRoutes import NLMRouter
 import uvicorn
 from os import getenv
+from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI(
     title="PhsiPy API",
     description="Rest API for making scientific calculations easy.",
     version="1.0.0",
+)
+
+origins = [
+    "http://localhost:8081",
+    "*",
+]
+
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
 )
 
 
