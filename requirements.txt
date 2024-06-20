@@ -1,4 +1,4 @@
 fastapi==0.111.0
-numpy==1.26.4
-pydantic==2.7.1
-uvicorn
+numpy==2.0.0
+pydantic==2.7.4
+uvicorn==0.30.1
