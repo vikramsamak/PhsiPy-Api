@@ -33,8 +33,20 @@ ROUTE_PARAMS = {
     },
     "SUBAUTOMATIC": {},
     "NLM": {
-        "FORCE": {"tags": ["NLM Enpoints"]},
-        "MOMENTUM": {"tags": ["NLM Enpoints"]},
-        "RECOIL_VELOCITY": {"tags": ["NLM Enpoints"]},
+        "FORCE": {
+            "tags": ["NLM Endpoints"],
+            "summary": "Force Calculation",
+            "description": "Calculate the force exerted on an object given mass and acceleration.",
+        },
+        "MOMENTUM": {
+            "tags": ["NLM Endpoints"],
+            "summary": "Momentum Calculation",
+            "description": "Compute the momentum of an object given its mass and velocity.",
+        },
+        "RECOIL_VELOCITY": {
+            "tags": ["NLM Endpoints"],
+            "summary": "Recoil Velocity Calculation",
+            "description": "Determine the recoil velocity of an object after a collision or explosion, given the masses and velocities of the objects involved.",
+        },
     },
 }

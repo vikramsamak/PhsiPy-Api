@@ -1,17 +1,17 @@
 from pydantic import BaseModel
 
 
-class Force(BaseModel):
+class ForceRequest(BaseModel):
     mass: float
     acceleration: float
 
 
-class Momentum(BaseModel):
+class MomentumRequest(BaseModel):
     mass: float
     velocity: float
 
 
-class Recoil_Velocity(BaseModel):
+class Recoil_VelocityRequest(BaseModel):
     massofbullet: float
     initialvelocity: float
     massofgun: float
