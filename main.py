@@ -56,7 +56,7 @@ app.openapi = custom_openapi
 app.include_router(Electricity_router, prefix="/electricity")
 
 # SubAutomatic Route
-# app.include_router(SubAutomatic_Router, prefix="/subautomatic")
+app.include_router(SubAutomatic_Router, prefix="/subautomatic")
 
 # NLM Routes
 app.include_router(NLMRouter, prefix="/nlm")

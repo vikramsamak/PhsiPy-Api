@@ -1,11 +1,10 @@
 from Dictionaries import NlmDictionary
-from Classes import NlmClasses
-from Classes.GenericResponse import GenericResponse
+from Schemas.NlmSchema import *
+from Schemas.GenericSchema import GenericResponse
 from Libs.PhsiPy.PhsipyEquations import Nlm
-from Dictionaries import NlmDictionary
 
 
-def get_force(req: NlmClasses.ForceRequest) -> GenericResponse[float]:
+def get_force(req: ForceRequest) -> GenericResponse[float]:
     force = Nlm.force(req.mass, req.acceleration)
     return GenericResponse(
         Definition=NlmDictionary.NlmDict["force"],
@@ -14,7 +13,7 @@ def get_force(req: NlmClasses.ForceRequest) -> GenericResponse[float]:
     )
 
 
-def get_momentum(req: NlmClasses.MomentumRequest) -> GenericResponse[float]:
+def get_momentum(req: MomentumRequest) -> GenericResponse[float]:
     momentum = Nlm.momentum(req.mass, req.velocity)
     return GenericResponse(
         Definition=NlmDictionary.NlmDict["momentum"],
@@ -24,7 +23,7 @@ def get_momentum(req: NlmClasses.MomentumRequest) -> GenericResponse[float]:
 
 
 def get_recoil_velocity(
-    req: NlmClasses.Recoil_VelocityRequest,
+    req: Recoil_VelocityRequest,
 ) -> GenericResponse[float]:
     recoil_velocity = Nlm.recoil_velocity(
         req.massofbullet, req.massofgun, req.initialvelocity
