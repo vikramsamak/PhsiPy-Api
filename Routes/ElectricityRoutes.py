@@ -1,7 +1,7 @@
 from fastapi import APIRouter
-from Classes import ElectricityClasses
+from Schemas.ElectricitySchema import *
 from Controllers import ElectricityControllers
-from Classes.GenericResponse import GenericResponse
+from Schemas.GenericSchema import GenericResponse
 from Helpers import Constants
 
 Electricity_router = APIRouter()
@@ -14,7 +14,7 @@ ELECTRICITY_ROUTE_PARAMS = Constants.ROUTE_PARAMS["ELECTRICITY"]
     **ELECTRICITY_ROUTE_PARAMS["FORCE_ELECTROSTATICS"],
     response_model=GenericResponse[float]
 )
-def force_electrostatics(req: ElectricityClasses.Force_ElectrostaticsRequest):
+def force_electrostatics(req: Force_Electrostatics_Request):
     return ElectricityControllers.get_force_electrostatics(req)
 
 
@@ -23,7 +23,7 @@ def force_electrostatics(req: ElectricityClasses.Force_ElectrostaticsRequest):
     **ELECTRICITY_ROUTE_PARAMS["RESISTANCE"],
     response_model=GenericResponse[float]
 )
-def resistance(req: ElectricityClasses.ResistanceRequest):
+def resistance(req: Resistance_Request):
     return ElectricityControllers.get_resistance(req)
 
 
@@ -32,7 +32,7 @@ def resistance(req: ElectricityClasses.ResistanceRequest):
     **ELECTRICITY_ROUTE_PARAMS["CURRENT"],
     response_model=GenericResponse[float]
 )
-def current(req: ElectricityClasses.CurrentRequest):
+def current(req: Current_Request):
     return ElectricityControllers.get_current(req)
 
 
@@ -41,12 +41,12 @@ def current(req: ElectricityClasses.CurrentRequest):
     **ELECTRICITY_ROUTE_PARAMS["VOLTAGE"],
     response_model=GenericResponse[float]
 )
-def voltage(req: ElectricityClasses.VoltageRequest):
+def voltage(req: Voltage_Request):
     return ElectricityControllers.get_voltage(req)
 
 
 @Electricity_router.post(
     "/power", **ELECTRICITY_ROUTE_PARAMS["POWER"], response_model=GenericResponse[float]
 )
-def power(req: ElectricityClasses.PowerRequest):
+def power(req: Power_Request):
     return ElectricityControllers.get_power(req)

@@ -1,15 +1,11 @@
 from Dictionaries import ElectricityDictionary
 from Libs.PhsiPy.PhsipyEquations import Electricity
-from Classes.ElectricityClasses import Force_ElectrostaticsRequest
-from Classes.ElectricityClasses import ResistanceRequest
-from Classes.ElectricityClasses import CurrentRequest
-from Classes.ElectricityClasses import VoltageRequest
-from Classes.ElectricityClasses import PowerRequest
-from Classes.GenericResponse import GenericResponse
+from Schemas.ElectricitySchema import *
+from Schemas.GenericSchema import GenericResponse
 
 
 def get_force_electrostatics(
-    req: Force_ElectrostaticsRequest,
+    req: Force_Electrostatics_Request,
 ) -> GenericResponse[float]:
     force_electrostatics = Electricity.force_electrostatics(
         req.q1, req.q2, req.resistance
@@ -21,7 +17,7 @@ def get_force_electrostatics(
     )
 
 
-def get_resistance(req: ResistanceRequest) -> GenericResponse[float]:
+def get_resistance(req: Resistance_Request) -> GenericResponse[float]:
     resistance = Electricity.resistance(req.voltage, req.current)
     return GenericResponse(
         Definition=ElectricityDictionary.ElectricityDict["resistance"],
@@ -30,7 +26,7 @@ def get_resistance(req: ResistanceRequest) -> GenericResponse[float]:
     )
 
 
-def get_current(req: CurrentRequest) -> GenericResponse[float]:
+def get_current(req: Current_Request) -> GenericResponse[float]:
     current = Electricity.current(req.voltage, req.resistance)
     return GenericResponse(
         Definition=ElectricityDictionary.ElectricityDict["current"],
@@ -39,7 +35,7 @@ def get_current(req: CurrentRequest) -> GenericResponse[float]:
     )
 
 
-def get_voltage(req: VoltageRequest) -> GenericResponse[float]:
+def get_voltage(req: Voltage_Request) -> GenericResponse[float]:
     voltage = Electricity.voltage(req.current, req.resistance)
     return GenericResponse(
         Definition=ElectricityDictionary.ElectricityDict["voltage"],
@@ -48,7 +44,7 @@ def get_voltage(req: VoltageRequest) -> GenericResponse[float]:
     )
 
 
-def get_power(req: PowerRequest) -> GenericResponse[float]:
+def get_power(req: Power_Request) -> GenericResponse[float]:
     power = Electricity.power(req.voltage, req.current)
     return GenericResponse(
         Definition=ElectricityDictionary.ElectricityDict["power"],
