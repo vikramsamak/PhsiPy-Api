@@ -7,6 +7,7 @@ class Mass_Energy_EquivalenceRequest(BaseModel):
 
 class Binding_EnergyRequest(BaseModel):
     mass_parent: float
+    mass_daughters: list[float]
 
 
 class De_Broglie_WavelengthRequest(BaseModel):
