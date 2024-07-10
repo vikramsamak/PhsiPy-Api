@@ -12,14 +12,14 @@ NLM_ROUTE_PARAMS = Constants.ROUTE_PARAMS["NLM"]
 @NLMRouter.post(
     "/force", **NLM_ROUTE_PARAMS["FORCE"], response_model=GenericResponse[float]
 )
-def force(req: ForceRequest):
+def force(req: Force_Request):
     return NlmControllers.get_force(req)
 
 
 @NLMRouter.post(
     "/momentum", **NLM_ROUTE_PARAMS["MOMENTUM"], response_model=GenericResponse[float]
 )
-def momentum(req: MomentumRequest):
+def momentum(req: Momentum_Request):
     return NlmControllers.get_momentum(req)
 
 
@@ -28,5 +28,5 @@ def momentum(req: MomentumRequest):
     **NLM_ROUTE_PARAMS["RECOIL_VELOCITY"],
     response_model=GenericResponse[float]
 )
-def recoil_velocity(req: Recoil_VelocityRequest):
+def recoil_velocity(req: Recoil_Velocity_Request):
     return NlmControllers.get_recoil_velocity(req)

@@ -5,7 +5,7 @@ from Libs.PhsiPy.PhsipyEquations import Subatomic
 
 
 def get_mass_energy_equivalence(
-    req: Mass_Energy_EquivalenceRequest,
+    req: Mass_Energy_Equivalence_Request,
 ) -> GenericResponse[float]:
 
     energy_equivalence = Subatomic.mass_energy_equivalence(req.mass)
@@ -17,7 +17,7 @@ def get_mass_energy_equivalence(
     )
 
 
-def get_binding_energy(req: Binding_EnergyRequest) -> GenericResponse[float]:
+def get_binding_energy(req: Binding_Energy_Request) -> GenericResponse[float]:
 
     binding_energy = Subatomic.binding_energy(req.mass_parent, req.mass_daughters)
 
@@ -29,7 +29,7 @@ def get_binding_energy(req: Binding_EnergyRequest) -> GenericResponse[float]:
 
 
 def get_de_broglie_wavelength(
-    req: De_Broglie_WavelengthRequest,
+    req: De_Broglie_Wavelength_Request,
 ) -> GenericResponse[float]:
 
     de_broglie_wavelength = Subatomic.de_broglie_wavelength(req.momentum, req.mass)
@@ -41,7 +41,7 @@ def get_de_broglie_wavelength(
     )
 
 
-def get_bohr_radius(req: Bohr_radiusRequest) -> GenericResponse[float]:
+def get_bohr_radius(req: Bohr_radius_Request) -> GenericResponse[float]:
 
     bohr_radius = Subatomic.bohr_radius(req.atomic_number)
 
@@ -53,7 +53,7 @@ def get_bohr_radius(req: Bohr_radiusRequest) -> GenericResponse[float]:
 
 
 def get_energy_level_hydrogen(
-    req: Energy_Level_HydrogenRequest,
+    req: Energy_Level_Hydrogen_Request,
 ) -> GenericResponse[float]:
 
     energy_level_hydrogen = Subatomic.energy_level_hydrogen(req.n)
@@ -65,7 +65,7 @@ def get_energy_level_hydrogen(
     )
 
 
-def get_radioactive_decay(req: Radioactive_DecayRequest) -> GenericResponse[float]:
+def get_radioactive_decay(req: Radioactive_Decay_Request) -> GenericResponse[float]:
 
     radioactive_decay = Subatomic.radioactive_decay(
         req.initial_amount, req.decay_constant, req.time

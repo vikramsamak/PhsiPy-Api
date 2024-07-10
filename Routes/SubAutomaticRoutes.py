@@ -14,7 +14,7 @@ SUBAUTOMATIC_PARAMS = Constants.ROUTE_PARAMS["SUBAUTOMATIC"]
     **SUBAUTOMATIC_PARAMS["MASS_ENERGY_EQUIVALENCE"],
     response_model=GenericResponse[float]
 )
-def mass_energy_equivalence(req: Mass_Energy_EquivalenceRequest):
+def mass_energy_equivalence(req: Mass_Energy_Equivalence_Request):
     return SubAutomaticControllers.get_mass_energy_equivalence(req)
 
 
@@ -23,7 +23,7 @@ def mass_energy_equivalence(req: Mass_Energy_EquivalenceRequest):
     **SUBAUTOMATIC_PARAMS["BINDING_ENERGY"],
     response_model=GenericResponse[float]
 )
-def binding_energy(req: Binding_EnergyRequest):
+def binding_energy(req: Binding_Energy_Request):
     return SubAutomaticControllers.get_binding_energy(req)
 
 
@@ -32,7 +32,7 @@ def binding_energy(req: Binding_EnergyRequest):
     **SUBAUTOMATIC_PARAMS["DE_BROGILE_WAVELENGTH"],
     response_model=GenericResponse[float]
 )
-def de_broglie_wavelength(req: De_Broglie_WavelengthRequest):
+def de_broglie_wavelength(req: De_Broglie_Wavelength_Request):
     return SubAutomaticControllers.get_de_broglie_wavelength(req)
 
 
@@ -41,7 +41,7 @@ def de_broglie_wavelength(req: De_Broglie_WavelengthRequest):
     **SUBAUTOMATIC_PARAMS["BOHR_RADIUS"],
     response_model=GenericResponse[float]
 )
-def bohr_radius(req: Bohr_radiusRequest):
+def bohr_radius(req: Bohr_radius_Request):
     return SubAutomaticControllers.get_bohr_radius(req)
 
 
@@ -50,7 +50,7 @@ def bohr_radius(req: Bohr_radiusRequest):
     **SUBAUTOMATIC_PARAMS["ENERGY_LEVEL_HYDROGEN"],
     response_model=GenericResponse[float]
 )
-def energy_level_hydrogen(req: Energy_Level_HydrogenRequest):
+def energy_level_hydrogen(req: Energy_Level_Hydrogen_Request):
     return SubAutomaticControllers.get_energy_level_hydrogen(req)
 
 
@@ -59,7 +59,7 @@ def energy_level_hydrogen(req: Energy_Level_HydrogenRequest):
     **SUBAUTOMATIC_PARAMS["RADIOACTIVE_DECAY"],
     response_model=GenericResponse[float]
 )
-def radioactive_decay(req: Radioactive_DecayRequest):
+def radioactive_decay(req: Radioactive_Decay_Request):
     return SubAutomaticControllers.get_radioactive_decay(req)
 
 
