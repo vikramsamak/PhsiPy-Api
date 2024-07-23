@@ -70,4 +70,4 @@ class gravitational_acceleration(BaseModel):
 
 class keplers_third_law(BaseModel):
     period: float
-    semi_major_axis: float**3
+    semi_major_axis: float
