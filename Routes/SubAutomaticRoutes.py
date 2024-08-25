@@ -1,12 +1,12 @@
 from fastapi import APIRouter
 from Controllers import SubAutomaticControllers
 from Schemas.SubAutomaticSchema import *
-from Helpers import Constants
 from Schemas.GenericSchema import GenericResponse
+from Constants import SubautomicConstants
 
 SubAutomatic_Router = APIRouter()
 
-SUBAUTOMATIC_PARAMS = Constants.ROUTE_PARAMS["SUBAUTOMATIC"]
+SUBAUTOMATIC_PARAMS = SubautomicConstants.SUBAUTOMIC_ROUTE_PARAMS
 
 
 @SubAutomatic_Router.post(
