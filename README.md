@@ -67,6 +67,14 @@ We welcome contributions from the community. To contribute:
 4. Push to the branch: `git push origin feature-branch-name`.
 5. Open a pull request.
 
+## Acknowledgements
+
+We would like to express our gratitude to the developers and contributors of **PhysiPy**, a powerful Python library that significantly enhances the capabilities of our API. PhysiPy provides a comprehensive collection of physics formulas and constants, facilitating accurate and efficient calculations across various branches of physics, including mechanics, electromagnetism, thermodynamics, and quantum mechanics.
+
+We extend our special thanks to **Rohan Kishore**, whose contributions and dedication to the development of the PhysiPy library have been instrumental in streamlining our development process. His efforts have enabled users to perform complex calculations without extensive manual coding, making it an invaluable resource for students, researchers, and enthusiasts alike.
+
+For more information about PhysiPy, please visit the official repository: [PhysiPy GitHub Repository](https://github.com/rohankishore/PhysiPy) developed by Rohan Kishore. To learn more about Rohan Kishore, please check his profile at [Rohan Kishore GitHub](https://github.com/rohankishore).
+
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
