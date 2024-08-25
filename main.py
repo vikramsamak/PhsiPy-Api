@@ -1,8 +1,9 @@
 from fastapi import FastAPI
 from fastapi.openapi.utils import get_openapi
-from Routes.ElectricityRoutes import Electricity_router
+from Routes.ElectricityRoutes import Electricity_Router
 from Routes.SubAutomaticRoutes import SubAutomatic_Router
-from Routes.NlmRoutes import NLMRouter
+from Routes.NlmRoutes import NLM_Router
+from Routes.GravitationRoutes import Gravitation_Router
 import uvicorn
 from os import getenv
 from fastapi.middleware.cors import CORSMiddleware
@@ -53,13 +54,16 @@ def index():
 app.openapi = custom_openapi
 
 # Electricity Route
-app.include_router(Electricity_router, prefix="/electricity")
+app.include_router(Electricity_Router, prefix="/electricity")
 
 # SubAutomatic Route
 app.include_router(SubAutomatic_Router, prefix="/subautomatic")
 
 # NLM Routes
-app.include_router(NLMRouter, prefix="/nlm")
+app.include_router(NLM_Router, prefix="/nlm")
+
+# Gravitation Route
+app.include_router(Gravitation_Router, prefix="/gravitation")
 
 if __name__ == "__main__":
     port = int(getenv("PORT", 8000))

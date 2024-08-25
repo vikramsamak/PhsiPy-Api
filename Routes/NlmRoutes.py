@@ -1,29 +1,29 @@
 from fastapi import APIRouter
-from Helpers import Constants
 from Controllers import NlmControllers
 from Schemas.NlmSchema import *
 from Schemas.GenericSchema import GenericResponse
+from Constants import NLMConstants
 
-NLMRouter = APIRouter()
+NLM_Router = APIRouter()
 
-NLM_ROUTE_PARAMS = Constants.ROUTE_PARAMS["NLM"]
+NLM_ROUTE_PARAMS = NLMConstants.NLM_ROUTE_PARAMS
 
 
-@NLMRouter.post(
+@NLM_Router.post(
     "/force", **NLM_ROUTE_PARAMS["FORCE"], response_model=GenericResponse[float]
 )
 def force(req: Force_Request):
     return NlmControllers.get_force(req)
 
 
-@NLMRouter.post(
+@NLM_Router.post(
     "/momentum", **NLM_ROUTE_PARAMS["MOMENTUM"], response_model=GenericResponse[float]
 )
 def momentum(req: Momentum_Request):
     return NlmControllers.get_momentum(req)
 
 
-@NLMRouter.post(
+@NLM_Router.post(
     "/recoil_velocity",
     **NLM_ROUTE_PARAMS["RECOIL_VELOCITY"],
     response_model=GenericResponse[float]

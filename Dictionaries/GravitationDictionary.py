@@ -1,0 +1,16 @@
+GravitationDict = {
+    "G": "The gravitational constant, denoted by G, is a fundamental physical constant that quantifies the strength of the gravitational force between two bodies. Its value is approximately 6.674 × 10⁻¹¹ N(m/kg)².",
+    "g_potential": "Gravitational potential is the potential energy per unit mass at a point in a gravitational field. It represents the work done by gravity in bringing a mass from infinity to that point.",
+    "g_in_depth": "An in-depth exploration of the gravitational constant (G), including its derivation, significance, and application in various physical laws, particularly Newton's law of universal gravitation.",
+    "axial_velocity": "Axial velocity refers to the component of velocity along the axis of rotation for a rotating object or along the axis of an orbit for an orbiting object.",
+    "gravitational_force": "Gravitational force is the attractive force between two masses, determined by Newton's law of universal gravitation. The force is proportional to the product of the masses and inversely proportional to the square of the distance between them.",
+    "gravitational_potential_energy": "Gravitational potential energy is the energy possessed by an object due to its position in a gravitational field. It is calculated as the work done to move the object to that position from a reference point, usually infinity.",
+    "gravitational_field_strength": "Gravitational field strength is the force per unit mass experienced by a small test mass placed in a gravitational field. It is a vector quantity that points toward the source of the gravitational field.",
+    "escape_velocity": "Escape velocity is the minimum velocity an object must have to escape from the gravitational influence of a celestial body without further propulsion.",
+    "orbital_velocity": "Orbital velocity is the velocity required for an object to maintain a stable orbit around a celestial body. It depends on the mass of the body being orbited and the distance from the center of the body.",
+    "period_of_orbit": "The period of orbit is the time taken for an object to complete one full orbit around another object. It is determined by the orbital radius and the mass of the central object.",
+    "gravitational_potential": "Gravitational potential refers to the work done per unit mass in bringing a small test mass from infinity to a specific point in a gravitational field.",
+    "weight": "Weight is the force exerted on an object due to gravity. It is the product of the object's mass and the gravitational field strength at its location.",
+    "gravitational_acceleration": "Gravitational acceleration is the acceleration of an object due to the force of gravity acting on it. On Earth, this acceleration is approximately 9.81 m/s² and is denoted by 'g'. It varies depending on the mass of the celestial body and the distance from its center.",
+    "keplers_third_law": "Kepler's Third Law states that the square of the period of orbit of a planet is directly proportional to the cube of the semi-major axis of its orbit. This law applies to any object in orbit around a central body.",
+}
