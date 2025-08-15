@@ -1,22 +1,23 @@
 ELECTRICITY_ROUTE_PARAMS = {
     "FORCE_ELECTROSTATICS": {
-        "summary": "Calculate electrostatic force",
-        "description": "This endpoint calculates the electrostatic force between two charges.",
+        "summary": "Calculate Electrostatic Force",
+        "description": "Calculates the electrostatic force between two charges.",
     },
     "RESISTANCE": {
-        "summary": "Calculate electrical resistance",
-        "description": "This endpoint calculates the electrical resistance given voltage and current.",
+        "summary": "Calculate Electrical Resistance",
+        "description": "Calculates the electrical resistance.",
     },
     "CURRENT": {
-        "summary": "Calculate electric current",
-        "description": "This endpoint calculates the electric current given voltage and resistance.",
+        "summary": "Calculate Electric Current",
+        "description": "Calculates the electric current.",
     },
     "VOLTAGE": {
-        "summary": "Calculate electric voltage",
-        "description": "This endpoint calculates the electric voltage given current and resistance.",
+        "summary": "Calculate Electric Voltage",
+        "description": "Calculates the electric voltage.",
     },
     "POWER": {
-        "summary": "Calculate electric power",
-        "description": "This endpoint calculates the electric power given voltage and current.",
+        "summary": "Calculate Electric Power",
+        "description": "Calculates the electric power.",
     },
 }
+

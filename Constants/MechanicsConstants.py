@@ -1,66 +1,66 @@
 MECHANICS_ROUTE_PARAMS = {
     "VELOCITY": {
-        "summary": "Calculate velocity",
-        "description": "Velocity is the rate of change of displacement with respect to time. It is a vector quantity, having both magnitude and direction.",
+        "summary": "Calculate Velocity",
+        "description": "Calculates the velocity of an object.",
     },
     "DISPLACEMENT": {
-        "summary": "Calculate displacement",
-        "description": "Displacement is the change in position of an object. It is a vector quantity, representing the shortest distance between the initial and final points.",
+        "summary": "Calculate Displacement",
+        "description": "Calculates the displacement of an object.",
     },
     "ACCELERATION": {
-        "summary": "Calculate acceleration",
-        "description": "Acceleration is the rate of change of velocity of an object with respect to time. It is a vector quantity.",
+        "summary": "Calculate Acceleration",
+        "description": "Calculates the acceleration of an object.",
     },
     "UNIFORM_ACCELERATED_MOTION": {
-        "summary": "Calculate uniform accelerated motion",
-        "description": "Uniform accelerated motion describes the motion of an object with constant acceleration. The equations of motion relate displacement, velocity, acceleration, and time.",
+        "summary": "Calculate Uniform Accelerated Motion",
+        "description": "Calculates parameters for uniform accelerated motion.",
     },
     "FORCE": {
-        "summary": "Calculate force",
-        "description": "Force is an influence that can change the motion of an object. It is a vector quantity, described by Newton's second law (F=ma).",
+        "summary": "Calculate Force",
+        "description": "Calculates the force exerted on an object.",
     },
     "WORK": {
-        "summary": "Calculate work",
-        "description": "Work is done when a force causes a displacement of an object. It is the product of the force and the distance moved in the direction of the force.",
+        "summary": "Calculate Work",
+        "description": "Calculates the work done by a force.",
     },
     "KINETIC_ENERGY": {
-        "summary": "Calculate kinetic energy",
-        "description": "Kinetic energy is the energy that an object possesses due to its motion. It is proportional to the mass and the square of the velocity.",
+        "summary": "Calculate Kinetic Energy",
+        "description": "Calculates the kinetic energy of an object.",
     },
     "POTENTIAL_ENERGY": {
-        "summary": "Calculate potential energy",
-        "description": "Potential energy is the energy stored in an object due to its position in a force field, such as a gravitational field.",
+        "summary": "Calculate Potential Energy",
+        "description": "Calculates the potential energy of an object.",
     },
     "POWER": {
-        "summary": "Calculate power",
-        "description": "Power is the rate at which work is done or energy is transferred. It is the work done per unit of time.",
+        "summary": "Calculate Power",
+        "description": "Calculates the power generated or consumed.",
     },
     "MOMENTUM": {
-        "summary": "Calculate momentum",
-        "description": "Momentum is the product of the mass and velocity of an object. It is a vector quantity and a measure of the motion of an object.",
+        "summary": "Calculate Momentum",
+        "description": "Calculates the momentum of an object.",
     },
     "IMPULSE": {
-        "summary": "Calculate impulse",
-        "description": "Impulse is the change in momentum of an object when a force is applied over a short period of time. It is the product of the force and the time interval.",
+        "summary": "Calculate Impulse",
+        "description": "Calculates the impulse applied to an object.",
     },
     "CIRCULAR_VELOCITY": {
-        "summary": "Calculate circular velocity",
-        "description": "Circular velocity is the constant speed of an object moving in a circular path.",
+        "summary": "Calculate Circular Velocity",
+        "description": "Calculates the velocity of an object in circular motion.",
     },
     "CENTRIPETAL_ACCELERATION": {
-        "summary": "Calculate centripetal acceleration",
-        "description": "Centripetal acceleration is the acceleration of an object moving in a circular path, directed towards the center of the circle.",
+        "summary": "Calculate Centripetal Acceleration",
+        "description": "Calculates the centripetal acceleration of an object in circular motion.",
     },
     "TORQUE": {
-        "summary": "Calculate torque",
-        "description": "Torque is the rotational equivalent of force. It is a measure of the tendency of a force to cause rotation.",
+        "summary": "Calculate Torque",
+        "description": "Calculates the torque applied to an object.",
     },
     "ANGULAR_VELOCITY": {
-        "summary": "Calculate angular velocity",
-        "description": "Angular velocity is the rate of change of angular displacement with respect to time. It is a vector quantity.",
+        "summary": "Calculate Angular Velocity",
+        "description": "Calculates the angular velocity of a rotating object.",
     },
     "ANGULAR_ACCELERATION": {
-        "summary": "Calculate angular acceleration",
-        "description": "Angular acceleration is the rate of change of angular velocity with respect to time. It is a vector quantity.",
+        "summary": "Calculate Angular Acceleration",
+        "description": "Calculates the angular acceleration of a rotating object.",
     },
 }
