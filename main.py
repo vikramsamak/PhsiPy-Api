@@ -4,6 +4,7 @@ from routes.ElectricityRoutes import Electricity_Router
 from routes.SubAutomaticRoutes import SubAutomatic_Router
 from routes.NlmRoutes import NLM_Router
 from routes.GravitationRoutes import Gravitation_Router
+from routes.MechanicsRoutes import Mechanics_Router
 import uvicorn
 from os import getenv
 from fastapi.middleware.cors import CORSMiddleware
@@ -64,6 +65,9 @@ app.include_router(NLM_Router, prefix="/nlm")
 
 # Gravitation Route
 app.include_router(Gravitation_Router, prefix="/gravitation")
+
+# Mechanics Route
+app.include_router(Mechanics_Router, prefix="/mechanics")
 
 if __name__ == "__main__":
     port = int(getenv("PORT", 8000))
