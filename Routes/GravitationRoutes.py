@@ -12,7 +12,7 @@ GRAVIATATION_ROUTE_PARAMS = GravitationConstants.GRAVITATION_ROUTE_PARAMS
 @Gravitation_Router.post(
     "/G", **GRAVIATATION_ROUTE_PARAMS["G"], response_model=GenericResponse[float]
 )
-def calculate_g(req: G_Request):
+def calculate_g(req: GravitationalForceSchema):
     return GravitationControllers.calculate_g(req)
 
 
@@ -21,7 +21,7 @@ def calculate_g(req: G_Request):
     **GRAVIATATION_ROUTE_PARAMS["G_POTENTIAL"],
     response_model=GenericResponse[float]
 )
-def calculate_g_potential(req: G_Potential_Request):
+def calculate_g_potential(req: GravitationalPotentialSchema):
     return GravitationControllers.calculate_g_potential(req)
 
 
@@ -30,7 +30,7 @@ def calculate_g_potential(req: G_Potential_Request):
     **GRAVIATATION_ROUTE_PARAMS["G_IN_DEPTH"],
     response_model=GenericResponse[float]
 )
-def calculate_g_in_depth(req: G_In_Depth_Request):
+def calculate_g_in_depth(req: GravitationalFieldInDepthSchema):
     return GravitationControllers.calculate_g_in_depth(req)
 
 
@@ -39,7 +39,7 @@ def calculate_g_in_depth(req: G_In_Depth_Request):
     **GRAVIATATION_ROUTE_PARAMS["AXIAL_VELOCITY"],
     response_model=GenericResponse[float]
 )
-def calculate_axial_velocity(req: Axial_Velocity_Request):
+def calculate_axial_velocity(req: AxialVelocitySchema):
     return GravitationControllers.calculate_axial_velocity(req)
 
 
@@ -48,7 +48,7 @@ def calculate_axial_velocity(req: Axial_Velocity_Request):
     **GRAVIATATION_ROUTE_PARAMS["GRAVITATIONAL_FORCE"],
     response_model=GenericResponse[float]
 )
-def calculate_gravitational_force(req: Gravitational_Force_Request):
+def calculate_gravitational_force(req: GravitationalForceSchema2):
     return GravitationControllers.calculate_gravitational_force(req)
 
 
@@ -58,7 +58,7 @@ def calculate_gravitational_force(req: Gravitational_Force_Request):
     response_model=GenericResponse[float]
 )
 def calculate_gravitational_potential_energy(
-    req: Gravitational_Potential_Energy_Request,
+    req: GravitationalPotentialEnergySchema,
 ):
     return GravitationControllers.calculate_gravitational_potential_energy(req)
 
@@ -69,7 +69,7 @@ def calculate_gravitational_potential_energy(
     response_model=GenericResponse[float]
 )
 def calculate_gravitational_field_strength(
-    req: Gravitational_Field_Strength_Request,
+    req: GravitationalFieldStrengthSchema,
 ):
     return GravitationControllers.calculate_gravitational_field_strength(req)
 
@@ -79,7 +79,7 @@ def calculate_gravitational_field_strength(
     **GRAVIATATION_ROUTE_PARAMS["ESCAPE_VELOCITY"],
     response_model=GenericResponse[float]
 )
-def calculate_escape_velocity(req: Escape_Velocity_Request):
+def calculate_escape_velocity(req: EscapeVelocitySchema):
     return GravitationControllers.calculate_escape_velocity(req)
 
 
@@ -88,7 +88,7 @@ def calculate_escape_velocity(req: Escape_Velocity_Request):
     **GRAVIATATION_ROUTE_PARAMS["ORBITAL_VELOCITY"],
     response_model=GenericResponse[float]
 )
-def calculate_orbital_velocity(req: Orbital_Velocity_Request):
+def calculate_orbital_velocity(req: OrbitalVelocitySchema):
     return GravitationControllers.calculate_orbital_velocity(req)
 
 
@@ -97,7 +97,7 @@ def calculate_orbital_velocity(req: Orbital_Velocity_Request):
     **GRAVIATATION_ROUTE_PARAMS["PERIOD_OF_ORBIT"],
     response_model=GenericResponse[float]
 )
-def calculate_period_of_orbit(req: Period_Of_Orbit_Request):
+def calculate_period_of_orbit(req: PeriodOfOrbitSchema):
     return GravitationControllers.calculate_period_of_orbit(req)
 
 
@@ -106,7 +106,7 @@ def calculate_period_of_orbit(req: Period_Of_Orbit_Request):
     **GRAVIATATION_ROUTE_PARAMS["GRAVITATIONAL_POTENTIAL"],
     response_model=GenericResponse[float]
 )
-def calculate_gravitational_potential(req: Gravitational_Potential_Request):
+def calculate_gravitational_potential(req: GravitationalPotentialSchema2):
     return GravitationControllers.calculate_gravitational_potential(req)
 
 
@@ -115,7 +115,7 @@ def calculate_gravitational_potential(req: Gravitational_Potential_Request):
     **GRAVIATATION_ROUTE_PARAMS["WEIGHT"],
     response_model=GenericResponse[float]
 )
-def calculate_weight(req: Weight_Request):
+def calculate_weight(req: WeightSchema):
     return GravitationControllers.calculate_weight(req)
 
 
@@ -124,5 +124,5 @@ def calculate_weight(req: Weight_Request):
     **GRAVIATATION_ROUTE_PARAMS["KEPLERS_THIRD_LAW"],
     response_model=GenericResponse[float]
 )
-def calculate_keplers_third_law(req: Keplers_Third_Law_Request):
+def calculate_keplers_third_law(req: KeplersThirdLawSchema):
     return GravitationControllers.calculate_keplers_third_law(req)
