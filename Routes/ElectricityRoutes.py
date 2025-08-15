@@ -4,7 +4,7 @@ from controllers import ElectricityControllers
 from schemas.GenericSchema import GenericResponse
 from constants import ElectricityConstants
 
-Electricity_Router = APIRouter()
+Electricity_Router = APIRouter(tags=["Electricity"])
 
 ELECTRICITY_ROUTE_PARAMS = ElectricityConstants.ELECTRICITY_ROUTE_PARAMS
 

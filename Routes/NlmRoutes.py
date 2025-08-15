@@ -4,7 +4,7 @@ from schemas.NlmSchema import *
 from schemas.GenericSchema import GenericResponse
 from constants import NLMConstants
 
-NLM_Router = APIRouter()
+NLM_Router = APIRouter(tags=["NLM"])
 
 NLM_ROUTE_PARAMS = NLMConstants.NLM_ROUTE_PARAMS
 

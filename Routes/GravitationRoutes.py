@@ -4,13 +4,15 @@ from schemas.GravitationSchema import *
 from schemas.GenericSchema import GenericResponse
 from constants import GravitationConstants
 
-Gravitation_Router = APIRouter()
+Gravitation_Router = APIRouter(tags=["Gravitation"])
 
 GRAVIATATION_ROUTE_PARAMS = GravitationConstants.GRAVITATION_ROUTE_PARAMS
 
 
 @Gravitation_Router.post(
-    "/universal-gravitational-constant", **GRAVIATATION_ROUTE_PARAMS["G"], response_model=GenericResponse[float]
+    "/universal-gravitational-constant",
+    **GRAVIATATION_ROUTE_PARAMS["G"],
+    response_model=GenericResponse[float]
 )
 def calculate_g(req: GravitationalForceSchema):
     return GravitationControllers.calculate_g(req)

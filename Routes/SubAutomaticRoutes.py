@@ -4,7 +4,7 @@ from schemas.SubAutomaticSchema import *
 from schemas.GenericSchema import GenericResponse
 from constants import SubautomicConstants
 
-SubAutomatic_Router = APIRouter()
+SubAutomatic_Router = APIRouter(tags=["Subatomic"])
 
 SUBAUTOMATIC_PARAMS = SubautomicConstants.SUBAUTOMIC_ROUTE_PARAMS
 
