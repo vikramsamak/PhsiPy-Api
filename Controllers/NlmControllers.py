@@ -4,7 +4,7 @@ from schemas.GenericSchema import GenericResponse
 from libs.phsipy.PhsipyEquations import Nlm
 
 
-def get_force(req: ForceSchema) -> GenericResponse[float]:
+def calculate_force(req: ForceSchema) -> GenericResponse[float]:
     force = Nlm.force(req.mass, req.acceleration)
     return GenericResponse(
         Definition=NlmDictionary.NlmDict["force"],
@@ -13,7 +13,7 @@ def get_force(req: ForceSchema) -> GenericResponse[float]:
     )
 
 
-def get_momentum(req: MomentumSchema) -> GenericResponse[float]:
+def calculate_momentum(req: MomentumSchema) -> GenericResponse[float]:
     momentum = Nlm.momentum(req.mass, req.velocity)
     return GenericResponse(
         Definition=NlmDictionary.NlmDict["momentum"],
@@ -22,7 +22,7 @@ def get_momentum(req: MomentumSchema) -> GenericResponse[float]:
     )
 
 
-def get_recoil_velocity(
+def calculate_recoil_velocity(
     req: RecoilVelocitySchema,
 ) -> GenericResponse[float]:
     recoil_velocity = Nlm.recoil_velocity(

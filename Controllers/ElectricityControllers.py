@@ -4,7 +4,7 @@ from schemas.ElectricitySchema import *
 from schemas.GenericSchema import GenericResponse
 
 
-def get_force_electrostatics(
+def calculate_force_electrostatics(
     req: ForceElectrostaticsSchema,
 ) -> GenericResponse[float]:
     force_electrostatics = Electricity.force_electrostatics(
@@ -17,7 +17,7 @@ def get_force_electrostatics(
     )
 
 
-def get_resistance(req: ResistanceSchema) -> GenericResponse[float]:
+def calculate_resistance(req: ResistanceSchema) -> GenericResponse[float]:
     resistance = Electricity.resistance(req.voltage, req.current)
     return GenericResponse(
         Definition=ElectricityDictionary.ElectricityDict["resistance"],
@@ -26,7 +26,7 @@ def get_resistance(req: ResistanceSchema) -> GenericResponse[float]:
     )
 
 
-def get_current(req: CurrentSchema) -> GenericResponse[float]:
+def calculate_current(req: CurrentSchema) -> GenericResponse[float]:
     current = Electricity.current(req.voltage, req.resistance)
     return GenericResponse(
         Definition=ElectricityDictionary.ElectricityDict["current"],
@@ -35,7 +35,7 @@ def get_current(req: CurrentSchema) -> GenericResponse[float]:
     )
 
 
-def get_voltage(req: VoltageSchema) -> GenericResponse[float]:
+def calculate_voltage(req: VoltageSchema) -> GenericResponse[float]:
     voltage = Electricity.voltage(req.current, req.resistance)
     return GenericResponse(
         Definition=ElectricityDictionary.ElectricityDict["voltage"],
@@ -44,7 +44,7 @@ def get_voltage(req: VoltageSchema) -> GenericResponse[float]:
     )
 
 
-def get_power(req: PowerSchema) -> GenericResponse[float]:
+def calculate_power(req: PowerSchema) -> GenericResponse[float]:
     power = Electricity.power(req.voltage, req.current)
     return GenericResponse(
         Definition=ElectricityDictionary.ElectricityDict["power"],
