@@ -10,7 +10,7 @@ ELECTRICITY_ROUTE_PARAMS = ElectricityConstants.ELECTRICITY_ROUTE_PARAMS
 
 
 @Electricity_Router.post(
-    "/force_electrostatics",
+    "/force",
     **ELECTRICITY_ROUTE_PARAMS["FORCE_ELECTROSTATICS"],
     response_model=GenericResponse[float]
 )
@@ -19,7 +19,7 @@ def calculate_force_electrostatics(req: ForceElectrostaticsSchema):
 
 
 @Electricity_Router.post(
-    "/resistance",
+    "/ohm/resistance",
     **ELECTRICITY_ROUTE_PARAMS["RESISTANCE"],
     response_model=GenericResponse[float]
 )
@@ -28,7 +28,7 @@ def calculate_resistance(req: ResistanceSchema):
 
 
 @Electricity_Router.post(
-    "/current",
+    "/ohm/current",
     **ELECTRICITY_ROUTE_PARAMS["CURRENT"],
     response_model=GenericResponse[float]
 )
@@ -37,7 +37,7 @@ def calculate_current(req: CurrentSchema):
 
 
 @Electricity_Router.post(
-    "/voltage",
+    "/ohm/voltage",
     **ELECTRICITY_ROUTE_PARAMS["VOLTAGE"],
     response_model=GenericResponse[float]
 )

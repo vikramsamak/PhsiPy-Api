@@ -24,7 +24,7 @@ def calculate_momentum(req: MomentumSchema):
 
 
 @NLM_Router.post(
-    "/recoil_velocity",
+    "/velocity/recoil",
     **NLM_ROUTE_PARAMS["RECOIL_VELOCITY"],
     response_model=GenericResponse[float]
 )
