@@ -47,7 +47,12 @@ def custom_openapi():
     return app.openapi_schema
 
 
-@app.get("/", tags=["Welcome"])
+@app.get(
+    "/",
+    tags=["Welcome"],
+    summary="Welcome to PhsiPy API",
+    description="This endpoint returns a welcome message for the PhsiPy API.",
+)
 def index():
     return {"res": "Welcome to the PhsiPy-API"}
 
