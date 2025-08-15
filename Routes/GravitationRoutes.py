@@ -1,8 +1,8 @@
 from fastapi import APIRouter
-from Controllers import GravitationControllers
-from Schemas.GravitationSchema import *
-from Schemas.GenericSchema import GenericResponse
-from Constants import GravitationConstants
+from controllers import GravitationControllers
+from schemas.GravitationSchema import *
+from schemas.GenericSchema import GenericResponse
+from constants import GravitationConstants
 
 Gravitation_Router = APIRouter()
 

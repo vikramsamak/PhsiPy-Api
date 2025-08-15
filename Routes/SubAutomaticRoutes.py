@@ -1,8 +1,8 @@
 from fastapi import APIRouter
-from Controllers import SubAutomaticControllers
-from Schemas.SubAutomaticSchema import *
-from Schemas.GenericSchema import GenericResponse
-from Constants import SubautomicConstants
+from controllers import SubAutomaticControllers
+from schemas.SubAutomaticSchema import *
+from schemas.GenericSchema import GenericResponse
+from constants import SubautomicConstants
 
 SubAutomatic_Router = APIRouter()
 

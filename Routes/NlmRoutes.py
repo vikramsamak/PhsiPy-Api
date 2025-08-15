@@ -1,8 +1,8 @@
 from fastapi import APIRouter
-from Controllers import NlmControllers
-from Schemas.NlmSchema import *
-from Schemas.GenericSchema import GenericResponse
-from Constants import NLMConstants
+from controllers import NlmControllers
+from schemas.NlmSchema import *
+from schemas.GenericSchema import GenericResponse
+from constants import NLMConstants
 
 NLM_Router = APIRouter()
 

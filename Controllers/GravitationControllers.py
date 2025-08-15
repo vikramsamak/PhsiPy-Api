@@ -1,7 +1,7 @@
-from Libs.PhsiPy.PhsipyEquations import Gravitation
-from Schemas.GravitationSchema import *
-from Schemas.GenericSchema import GenericResponse
-from Dictionaries import GravitationDictionary
+from libs.phsipy.PhsipyEquations import Gravitation
+from schemas.GravitationSchema import *
+from schemas.GenericSchema import GenericResponse
+from dictionaries import GravitationDictionary
 
 
 def get_G(req: G_Request) -> GenericResponse[float]:

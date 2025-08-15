@@ -1,8 +1,8 @@
 from fastapi import APIRouter
-from Schemas.ElectricitySchema import *
-from Controllers import ElectricityControllers
-from Schemas.GenericSchema import GenericResponse
-from Constants import ElectricityConstants
+from schemas.ElectricitySchema import *
+from controllers import ElectricityControllers
+from schemas.GenericSchema import GenericResponse
+from constants import ElectricityConstants
 
 Electricity_Router = APIRouter()
 

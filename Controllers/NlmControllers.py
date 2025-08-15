@@ -1,7 +1,7 @@
-from Dictionaries import NlmDictionary
-from Schemas.NlmSchema import *
-from Schemas.GenericSchema import GenericResponse
-from Libs.PhsiPy.PhsipyEquations import Nlm
+from dictionaries import NlmDictionary
+from schemas.NlmSchema import *
+from schemas.GenericSchema import GenericResponse
+from libs.phsipy.PhsipyEquations import Nlm
 
 
 def get_force(req: Force_Request) -> GenericResponse[float]:

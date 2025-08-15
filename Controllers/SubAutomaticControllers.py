@@ -1,7 +1,7 @@
-from Dictionaries import SubAutomaticDictionary
-from Schemas.SubAutomaticSchema import *
-from Schemas.GenericSchema import GenericResponse
-from Libs.PhsiPy.PhsipyEquations import Subatomic
+from dictionaries import SubAutomaticDictionary
+from schemas.SubAutomaticSchema import *
+from schemas.GenericSchema import GenericResponse
+from libs.phsipy.PhsipyEquations import Subatomic
 
 
 def get_mass_energy_equivalence(

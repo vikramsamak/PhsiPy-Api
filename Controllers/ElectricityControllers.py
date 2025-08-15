@@ -1,7 +1,7 @@
-from Dictionaries import ElectricityDictionary
-from Libs.PhsiPy.PhsipyEquations import Electricity
-from Schemas.ElectricitySchema import *
-from Schemas.GenericSchema import GenericResponse
+from dictionaries import ElectricityDictionary
+from libs.phsipy.PhsipyEquations import Electricity
+from schemas.ElectricitySchema import *
+from schemas.GenericSchema import GenericResponse
 
 
 def get_force_electrostatics(
