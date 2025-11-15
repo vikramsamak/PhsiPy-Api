@@ -1,6 +1,6 @@
 import numpy as np
 import math
-from libs.phsipy.PhsipyConstants import *
+from PhsipyConstants import *
 
 
 def weight(mass):
