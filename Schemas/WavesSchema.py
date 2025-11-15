@@ -1,49 +1,49 @@
 from pydantic import BaseModel
 
-class WaveVelocityRequest(BaseModel):
+class WaveVelocitySchema(BaseModel):
     frequency: float
     wavelength: float
 
-class WavePeriodRequest(BaseModel):
+class WavePeriodSchema(BaseModel):
     frequency: float
 
-class WaveNumberRequest(BaseModel):
+class WaveNumberSchema(BaseModel):
     wavelength: float
 
-class IntensityRequest(BaseModel):
+class IntensitySchema(BaseModel):
     power: float
     area: float
 
-class RefractiveIndexRequest(BaseModel):
+class RefractiveIndexSchema(BaseModel):
     real_depth: float
     apparent_depth: float
 
-class DopplerEffectRequest(BaseModel):
+class DopplerEffectSchema(BaseModel):
     observed_frequency: float
     source_frequency: float
     wave_velocity: float
     observer_velocity: float
     source_velocity: float
 
-class AngularFrequencyRequest(BaseModel):
+class AngularFrequencySchema(BaseModel):
     frequency: float
 
-class WaveSpeedRequest(BaseModel):
+class WaveSpeedSchema(BaseModel):
     wavelength: float
     period: float
 
-class SoundIntensityRequest(BaseModel):
+class SoundIntensitySchema(BaseModel):
     sound_power: float
     area: float
 
-class SoundLevelRequest(BaseModel):
+class SoundLevelSchema(BaseModel):
     intensity: float
 
-class BeatsFrequencyRequest(BaseModel):
+class BeatsFrequencySchema(BaseModel):
     frequency1: float
     frequency2: float
 
-class BeatsPeriodRequest(BaseModel):
+class BeatsPeriodSchema(BaseModel):
     frequency1: float
     frequency2: float
 

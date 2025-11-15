@@ -3,7 +3,7 @@ from libs.phsipy.PhsipyEquations import Waves
 from schemas.WavesSchema import *
 from schemas.GenericSchema import GenericResponse
 
-def get_wave_velocity(req: WaveVelocityRequest) -> GenericResponse[float]:
+def calculate_wave_velocity(req: WaveVelocitySchema) -> GenericResponse[float]:
     velocity = Waves.wave_velocity(req.frequency, req.wavelength)
     return GenericResponse(
         Definition=WavesDict["wave_velocity"],
@@ -11,7 +11,7 @@ def get_wave_velocity(req: WaveVelocityRequest) -> GenericResponse[float]:
         Result=velocity,
     )
 
-def get_wave_period(req: WavePeriodRequest) -> GenericResponse[float]:
+def calculate_wave_period(req: WavePeriodSchema) -> GenericResponse[float]:
     period = Waves.wave_period(req.frequency)
     return GenericResponse(
         Definition=WavesDict["wave_period"],
@@ -19,7 +19,7 @@ def get_wave_period(req: WavePeriodRequest) -> GenericResponse[float]:
         Result=period,
     )
 
-def get_wave_number(req: WaveNumberRequest) -> GenericResponse[float]:
+def calculate_wave_number(req: WaveNumberSchema) -> GenericResponse[float]:
     wave_number = Waves.wave_number(req.wavelength)
     return GenericResponse(
         Definition=WavesDict["wave_number"],
@@ -27,7 +27,7 @@ def get_wave_number(req: WaveNumberRequest) -> GenericResponse[float]:
         Result=wave_number,
     )
 
-def get_intensity(req: IntensityRequest) -> GenericResponse[float]:
+def calculate_intensity(req: IntensitySchema) -> GenericResponse[float]:
     intensity = Waves.intensity(req.power, req.area)
     return GenericResponse(
         Definition=WavesDict["intensity"],
@@ -35,7 +35,7 @@ def get_intensity(req: IntensityRequest) -> GenericResponse[float]:
         Result=intensity,
     )
 
-def get_refractive_index(req: RefractiveIndexRequest) -> GenericResponse[float]:
+def calculate_refractive_index(req: RefractiveIndexSchema) -> GenericResponse[float]:
     refractive_index = Waves.refractive_index(req.real_depth, req.apparent_depth)
     return GenericResponse(
         Definition=WavesDict["refractive_index"],
@@ -43,7 +43,7 @@ def get_refractive_index(req: RefractiveIndexRequest) -> GenericResponse[float]:
         Result=refractive_index,
     )
 
-def get_doppler_effect(req: DopplerEffectRequest) -> GenericResponse[bool]:
+def calculate_doppler_effect(req: DopplerEffectSchema) -> GenericResponse[bool]:
     doppler_effect_result = Waves.doppler_effect(
         req.observed_frequency,
         req.source_frequency,
@@ -63,7 +63,7 @@ def get_doppler_effect(req: DopplerEffectRequest) -> GenericResponse[bool]:
         Result=doppler_effect_result,
     )
 
-def get_angular_frequency(req: AngularFrequencyRequest) -> GenericResponse[float]:
+def calculate_angular_frequency(req: AngularFrequencySchema) -> GenericResponse[float]:
     angular_frequency = Waves.angular_frequency(req.frequency)
     return GenericResponse(
         Definition=WavesDict["angular_frequency"],
@@ -71,7 +71,7 @@ def get_angular_frequency(req: AngularFrequencyRequest) -> GenericResponse[float
         Result=angular_frequency,
     )
 
-def get_wave_speed(req: WaveSpeedRequest) -> GenericResponse[float]:
+def calculate_wave_speed(req: WaveSpeedSchema) -> GenericResponse[float]:
     wave_speed = Waves.wave_speed(req.wavelength, req.period)
     return GenericResponse(
         Definition=WavesDict["wave_speed"],
@@ -79,7 +79,7 @@ def get_wave_speed(req: WaveSpeedRequest) -> GenericResponse[float]:
         Result=wave_speed,
     )
 
-def get_sound_intensity(req: SoundIntensityRequest) -> GenericResponse[float]:
+def calculate_sound_intensity(req: SoundIntensitySchema) -> GenericResponse[float]:
     sound_intensity = Waves.sound_intensity(req.sound_power, req.area)
     return GenericResponse(
         Definition=WavesDict["sound_intensity"],
@@ -87,7 +87,7 @@ def get_sound_intensity(req: SoundIntensityRequest) -> GenericResponse[float]:
         Result=sound_intensity,
     )
 
-def get_sound_level(req: SoundLevelRequest) -> GenericResponse[float]:
+def calculate_sound_level(req: SoundLevelSchema) -> GenericResponse[float]:
     sound_level = Waves.sound_level(req.intensity)
     return GenericResponse(
         Definition=WavesDict["sound_level"],
@@ -95,7 +95,7 @@ def get_sound_level(req: SoundLevelRequest) -> GenericResponse[float]:
         Result=sound_level,
     )
 
-def get_beats_frequency(req: BeatsFrequencyRequest) -> GenericResponse[float]:
+def calculate_beats_frequency(req: BeatsFrequencySchema) -> GenericResponse[float]:
     beats_frequency = Waves.beats_frequency(req.frequency1, req.frequency2)
     return GenericResponse(
         Definition=WavesDict["beats_frequency"],
@@ -103,7 +103,7 @@ def get_beats_frequency(req: BeatsFrequencyRequest) -> GenericResponse[float]:
         Result=beats_frequency,
     )
 
-def get_beats_period(req: BeatsPeriodRequest) -> GenericResponse[float]:
+def calculate_beats_period(req: BeatsPeriodSchema) -> GenericResponse[float]:
     beats_period = Waves.beats_period(req.frequency1, req.frequency2)
     return GenericResponse(
         Definition=WavesDict["beats_period"],
