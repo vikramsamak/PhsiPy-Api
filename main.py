@@ -5,6 +5,7 @@ from routes.SubAutomaticRoutes import SubAutomatic_Router
 from routes.NlmRoutes import NLM_Router
 from routes.GravitationRoutes import Gravitation_Router
 from routes.WavesRoutes import Waves_Router
+from routes.MechanicsRoutes import Mechanics_Router
 import uvicorn
 from os import getenv
 from fastapi.middleware.cors import CORSMiddleware
@@ -47,7 +48,12 @@ def custom_openapi():
     return app.openapi_schema
 
 
-@app.get("/", tags=["Welcome"])
+@app.get(
+    "/",
+    tags=["Welcome"],
+    summary="Welcome to PhsiPy API",
+    description="This endpoint returns a welcome message for the PhsiPy API.",
+)
 def index():
     return {"res": "Welcome to the PhsiPy-API"}
 
@@ -68,6 +74,8 @@ app.include_router(Gravitation_Router, prefix="/gravitation")
 
 # Waves Route
 app.include_router(Waves_Router, prefix="/waves")
+# Mechanics Route
+app.include_router(Mechanics_Router, prefix="/mechanics")
 
 if __name__ == "__main__":
     port = int(getenv("PORT", 8000))
