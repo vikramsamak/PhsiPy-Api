@@ -1,11 +1,11 @@
-from Dictionaries import SubAutomaticDictionary
-from Schemas.SubAutomaticSchema import *
-from Schemas.GenericSchema import GenericResponse
-from Libs.PhsiPy.PhsipyEquations import Subatomic
+from dictionaries import SubAutomaticDictionary
+from schemas.SubAutomaticSchema import *
+from schemas.GenericSchema import GenericResponse
+from libs.phsipy.PhsipyEquations import Subatomic
 
 
-def get_mass_energy_equivalence(
-    req: Mass_Energy_Equivalence_Request,
+def calculate_mass_energy_equivalence(
+    req: MassEnergyEquivalenceSchema,
 ) -> GenericResponse[float]:
 
     energy_equivalence = Subatomic.mass_energy_equivalence(req.mass)
@@ -17,7 +17,7 @@ def get_mass_energy_equivalence(
     )
 
 
-def get_binding_energy(req: Binding_Energy_Request) -> GenericResponse[float]:
+def calculate_binding_energy(req: BindingEnergySchema) -> GenericResponse[float]:
 
     binding_energy = Subatomic.binding_energy(req.mass_parent, req.mass_daughters)
 
@@ -28,8 +28,8 @@ def get_binding_energy(req: Binding_Energy_Request) -> GenericResponse[float]:
     )
 
 
-def get_de_broglie_wavelength(
-    req: De_Broglie_Wavelength_Request,
+def calculate_de_broglie_wavelength(
+    req: DeBroglieWavelengthSchema,
 ) -> GenericResponse[float]:
 
     de_broglie_wavelength = Subatomic.de_broglie_wavelength(req.momentum, req.mass)
@@ -41,7 +41,7 @@ def get_de_broglie_wavelength(
     )
 
 
-def get_bohr_radius(req: Bohr_radius_Request) -> GenericResponse[float]:
+def calculate_bohr_radius(req: BohrRadiusSchema) -> GenericResponse[float]:
 
     bohr_radius = Subatomic.bohr_radius(req.atomic_number)
 
@@ -52,8 +52,8 @@ def get_bohr_radius(req: Bohr_radius_Request) -> GenericResponse[float]:
     )
 
 
-def get_energy_level_hydrogen(
-    req: Energy_Level_Hydrogen_Request,
+def calculate_energy_level_hydrogen(
+    req: EnergyLevelHydrogenSchema,
 ) -> GenericResponse[float]:
 
     energy_level_hydrogen = Subatomic.energy_level_hydrogen(req.n)
@@ -65,7 +65,7 @@ def get_energy_level_hydrogen(
     )
 
 
-def get_radioactive_decay(req: Radioactive_Decay_Request) -> GenericResponse[float]:
+def calculate_radioactive_decay(req: RadioactiveDecaySchema) -> GenericResponse[float]:
 
     radioactive_decay = Subatomic.radioactive_decay(
         req.initial_amount, req.decay_constant, req.time
@@ -82,7 +82,7 @@ def get_radioactive_decay(req: Radioactive_Decay_Request) -> GenericResponse[flo
     )
 
 
-def get_half_life(req: Half_lifeRequest) -> GenericResponse[float]:
+def calculate_half_life(req: HalfLifeSchema) -> GenericResponse[float]:
 
     half_life = Subatomic.half_life(req.decay_constant)
 

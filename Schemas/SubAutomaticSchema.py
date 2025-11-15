@@ -1,33 +1,33 @@
 from pydantic import BaseModel
 
 
-class Mass_Energy_Equivalence_Request(BaseModel):
+class MassEnergyEquivalenceSchema(BaseModel):
     mass: float
 
 
-class Binding_Energy_Request(BaseModel):
+class BindingEnergySchema(BaseModel):
     mass_parent: float
     mass_daughters: list[float]
 
 
-class De_Broglie_Wavelength_Request(BaseModel):
+class DeBroglieWavelengthSchema(BaseModel):
     momentum: float
     mass: float
 
 
-class Bohr_radius_Request(BaseModel):
+class BohrRadiusSchema(BaseModel):
     atomic_number: float
 
 
-class Energy_Level_Hydrogen_Request(BaseModel):
+class EnergyLevelHydrogenSchema(BaseModel):
     n: float
 
 
-class Radioactive_Decay_Request(BaseModel):
+class RadioactiveDecaySchema(BaseModel):
     initial_amount: float
     decay_constant: float
     time: float
 
 
-class Half_lifeRequest(BaseModel):
+class HalfLifeSchema(BaseModel):
     decay_constant: float

@@ -1,10 +1,10 @@
-from Libs.PhsiPy.PhsipyEquations import Gravitation
-from Schemas.GravitationSchema import *
-from Schemas.GenericSchema import GenericResponse
-from Dictionaries import GravitationDictionary
+from libs.phsipy.PhsipyEquations import Gravitation
+from schemas.GravitationSchema import *
+from schemas.GenericSchema import GenericResponse
+from dictionaries import GravitationDictionary
 
 
-def get_G(req: G_Request) -> GenericResponse[float]:
+def calculate_g(req: GravitationalForceSchema) -> GenericResponse[float]:
     g = Gravitation.G(req.m1, req.m2, req.r)
     return GenericResponse(
         Definition=GravitationDictionary.GravitationDict["G"],
@@ -13,7 +13,7 @@ def get_G(req: G_Request) -> GenericResponse[float]:
     )
 
 
-def get_G_Potential(req: G_Potential_Request) -> GenericResponse[float]:
+def calculate_g_potential(req: GravitationalPotentialSchema) -> GenericResponse[float]:
     g_potential = Gravitation.G_Potential(req.M, req.r)
     return GenericResponse(
         Definition=GravitationDictionary.GravitationDict["g_potential"],
@@ -22,7 +22,7 @@ def get_G_Potential(req: G_Potential_Request) -> GenericResponse[float]:
     )
 
 
-def get_g_in_depth(req: G_In_Depth_Request) -> GenericResponse[float]:
+def calculate_g_in_depth(req: GravitationalFieldInDepthSchema) -> GenericResponse[float]:
     g_in_depth = Gravitation.g_in_depth(req.depth)
     return GenericResponse(
         Definition=GravitationDictionary.GravitationDict["g_in_depth"],
@@ -31,7 +31,7 @@ def get_g_in_depth(req: G_In_Depth_Request) -> GenericResponse[float]:
     )
 
 
-def get_axial_velocity(req: Axial_Velocity_Request) -> GenericResponse[float]:
+def calculate_axial_velocity(req: AxialVelocitySchema) -> GenericResponse[float]:
     axial_velocity = Gravitation.axial_velocity(req.area_swept, req.time)
     return GenericResponse(
         Definition=GravitationDictionary.GravitationDict["axial_velocity"],
@@ -40,7 +40,7 @@ def get_axial_velocity(req: Axial_Velocity_Request) -> GenericResponse[float]:
     )
 
 
-def get_gravitational_force(req: Gravitational_Force_Request) -> GenericResponse[float]:
+def calculate_gravitational_force(req: GravitationalForceSchema2) -> GenericResponse[float]:
     gravitational_force = Gravitation.gravitational_force(
         req.mass1, req.mass2, req.distance
     )
@@ -51,8 +51,8 @@ def get_gravitational_force(req: Gravitational_Force_Request) -> GenericResponse
     )
 
 
-def get_gravitational_potential_energy(
-    req: Gravitational_Potential_Energy_Request,
+def calculate_gravitational_potential_energy(
+    req: GravitationalPotentialEnergySchema,
 ) -> GenericResponse[float]:
     gravitational_potential_energy = Gravitation.gravitational_potential_energy(
         req.mass1, req.mass2, req.distance
@@ -66,8 +66,8 @@ def get_gravitational_potential_energy(
     )
 
 
-def get_gravitational_field_strength(
-    req: Gravitational_Field_Strength_Request,
+def calculate_gravitational_field_strength(
+    req: GravitationalFieldStrengthSchema,
 ) -> GenericResponse[float]:
     gravitational_field_strength = Gravitation.gravitational_field_strength(
         req.mass, req.distance
@@ -81,7 +81,7 @@ def get_gravitational_field_strength(
     )
 
 
-def get_escape_velocity(req: Escape_Velocity_Request) -> GenericResponse[float]:
+def calculate_escape_velocity(req: EscapeVelocitySchema) -> GenericResponse[float]:
     escape_velocity = Gravitation.escape_velocity(req.mass, req.radius)
     return GenericResponse(
         Definition=GravitationDictionary.GravitationDict["escape_velocity"],
@@ -90,7 +90,7 @@ def get_escape_velocity(req: Escape_Velocity_Request) -> GenericResponse[float]:
     )
 
 
-def get_orbital_velocity(req: Orbital_Velocity_Request) -> GenericResponse[float]:
+def calculate_orbital_velocity(req: OrbitalVelocitySchema) -> GenericResponse[float]:
     orbital_velocity = Gravitation.orbital_velocity(req.mass, req.radius)
     return GenericResponse(
         Definition=GravitationDictionary.GravitationDict["orbital_velocity"],
@@ -99,7 +99,7 @@ def get_orbital_velocity(req: Orbital_Velocity_Request) -> GenericResponse[float
     )
 
 
-def get_period_of_orbit(req: Period_Of_Orbit_Request) -> GenericResponse[float]:
+def calculate_period_of_orbit(req: PeriodOfOrbitSchema) -> GenericResponse[float]:
     period_of_orbit = Gravitation.period_of_orbit(req.mass, req.radius)
     return GenericResponse(
         Definition=GravitationDictionary.GravitationDict["period_of_orbit"],
@@ -108,8 +108,8 @@ def get_period_of_orbit(req: Period_Of_Orbit_Request) -> GenericResponse[float]:
     )
 
 
-def get_gravitational_potential(
-    req: Gravitational_Potential_Request,
+def calculate_gravitational_potential(
+    req: GravitationalPotentialSchema2,
 ) -> GenericResponse[float]:
     gravitational_potential = Gravitation.gravitational_potential(
         req.mass, req.distance
@@ -121,7 +121,7 @@ def get_gravitational_potential(
     )
 
 
-def get_weight(req: Weight_Request) -> GenericResponse[float]:
+def calculate_weight(req: WeightSchema) -> GenericResponse[float]:
     weight = Gravitation.weight(req.mass, req.acceleration_due_to_gravity)
     return GenericResponse(
         Definition=GravitationDictionary.GravitationDict["weight"],
@@ -133,8 +133,8 @@ def get_weight(req: Weight_Request) -> GenericResponse[float]:
     )
 
 
-def get_gravitational_acceleration(
-    req: Gravitational_Acceleration_Request,
+def calculate_gravitational_acceleration(
+    req: GravitationalAccelerationSchema,
 ) -> GenericResponse[float]:
     gravitational_acceleration = Gravitation.gravitational_acceleration(
         req.mass, req.distance
@@ -146,7 +146,7 @@ def get_gravitational_acceleration(
     )
 
 
-def get_keplers_third_law(req: Keplers_Third_Law_Request) -> GenericResponse[float]:
+def calculate_keplers_third_law(req: KeplersThirdLawSchema) -> GenericResponse[float]:
     keplers_third_law = Gravitation.keplers_third_law(req.period, req.semi_major_axis)
     return GenericResponse(
         Definition=GravitationDictionary.GravitationDict["keplers_third_law"],
