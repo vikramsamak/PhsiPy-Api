@@ -1,29 +1,27 @@
 from pydantic import BaseModel
 
 
-class Force_Electrostatics_Request(BaseModel):
+class ForceElectrostaticsSchema(BaseModel):
     q1: float
     q2: float
     resistance: float
 
 
-class Resistance_Request(BaseModel):
+class ResistanceSchema(BaseModel):
     voltage: float
     current: float
 
 
-class Current_Request(BaseModel):
+class CurrentSchema(BaseModel):
     voltage: float
     resistance: float
 
 
-class Voltage_Request(BaseModel):
+class VoltageSchema(BaseModel):
     current: float
     resistance: float
 
 
-class Power_Request(BaseModel):
+class PowerSchema(BaseModel):
     voltage: float
     current: float
-
-

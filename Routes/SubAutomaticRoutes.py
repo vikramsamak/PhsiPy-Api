@@ -1,72 +1,72 @@
 from fastapi import APIRouter
-from Controllers import SubAutomaticControllers
-from Schemas.SubAutomaticSchema import *
-from Schemas.GenericSchema import GenericResponse
-from Constants import SubautomicConstants
+from controllers import SubAutomaticControllers
+from schemas.SubAutomaticSchema import *
+from schemas.GenericSchema import GenericResponse
+from constants import SubautomicConstants
 
-SubAutomatic_Router = APIRouter()
+SubAutomatic_Router = APIRouter(tags=["Subatomic"])
 
 SUBAUTOMATIC_PARAMS = SubautomicConstants.SUBAUTOMIC_ROUTE_PARAMS
 
 
 @SubAutomatic_Router.post(
-    "/mass_energy_equivalence",
+    "/energy/mass-equivalence",
     **SUBAUTOMATIC_PARAMS["MASS_ENERGY_EQUIVALENCE"],
     response_model=GenericResponse[float]
 )
-def mass_energy_equivalence(req: Mass_Energy_Equivalence_Request):
-    return SubAutomaticControllers.get_mass_energy_equivalence(req)
+def calculate_mass_energy_equivalence(req: MassEnergyEquivalenceSchema):
+    return SubAutomaticControllers.calculate_mass_energy_equivalence(req)
 
 
 @SubAutomatic_Router.post(
-    "/binding_energy",
+    "/energy/binding",
     **SUBAUTOMATIC_PARAMS["BINDING_ENERGY"],
     response_model=GenericResponse[float]
 )
-def binding_energy(req: Binding_Energy_Request):
-    return SubAutomaticControllers.get_binding_energy(req)
+def calculate_binding_energy(req: BindingEnergySchema):
+    return SubAutomaticControllers.calculate_binding_energy(req)
 
 
 @SubAutomatic_Router.post(
-    "/de_broglie_wavelength",
+    "/quantum/de-broglie-wavelength",
     **SUBAUTOMATIC_PARAMS["DE_BROGILE_WAVELENGTH"],
     response_model=GenericResponse[float]
 )
-def de_broglie_wavelength(req: De_Broglie_Wavelength_Request):
-    return SubAutomaticControllers.get_de_broglie_wavelength(req)
+def calculate_de_broglie_wavelength(req: DeBroglieWavelengthSchema):
+    return SubAutomaticControllers.calculate_de_broglie_wavelength(req)
 
 
 @SubAutomatic_Router.post(
-    "/bohr_radius",
+    "/quantum/bohr-radius",
     **SUBAUTOMATIC_PARAMS["BOHR_RADIUS"],
     response_model=GenericResponse[float]
 )
-def bohr_radius(req: Bohr_radius_Request):
-    return SubAutomaticControllers.get_bohr_radius(req)
+def calculate_bohr_radius(req: BohrRadiusSchema):
+    return SubAutomaticControllers.calculate_bohr_radius(req)
 
 
 @SubAutomatic_Router.post(
-    "/energy_level_hydrogen",
+    "/quantum/energy-level-hydrogen",
     **SUBAUTOMATIC_PARAMS["ENERGY_LEVEL_HYDROGEN"],
     response_model=GenericResponse[float]
 )
-def energy_level_hydrogen(req: Energy_Level_Hydrogen_Request):
-    return SubAutomaticControllers.get_energy_level_hydrogen(req)
+def calculate_energy_level_hydrogen(req: EnergyLevelHydrogenSchema):
+    return SubAutomaticControllers.calculate_energy_level_hydrogen(req)
 
 
 @SubAutomatic_Router.post(
-    "/radioactive_decay",
+    "/radioactivity/decay",
     **SUBAUTOMATIC_PARAMS["RADIOACTIVE_DECAY"],
     response_model=GenericResponse[float]
 )
-def radioactive_decay(req: Radioactive_Decay_Request):
-    return SubAutomaticControllers.get_radioactive_decay(req)
+def calculate_radioactive_decay(req: RadioactiveDecaySchema):
+    return SubAutomaticControllers.calculate_radioactive_decay(req)
 
 
 @SubAutomatic_Router.post(
-    "/half_life",
+    "/radioactivity/half-life",
     **SUBAUTOMATIC_PARAMS["HALF_LIFE"],
     response_model=GenericResponse[float]
 )
-def half_life(req: Half_lifeRequest):
-    return SubAutomaticControllers.get_half_life(req)
+def calculate_half_life(req: HalfLifeSchema):
+    return SubAutomaticControllers.calculate_half_life(req)
