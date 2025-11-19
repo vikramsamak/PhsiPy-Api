@@ -7,6 +7,7 @@ from routes.GravitationRoutes import Gravitation_Router
 from routes.WavesRoutes import Waves_Router
 from routes.MechanicsRoutes import Mechanics_Router
 from routes.FluidStatePhysicsRoutes import FluidStatePhysics_Router
+from routes.ErrorsRoutes import Errors_Router
 import uvicorn
 from os import getenv
 from fastapi.middleware.cors import CORSMiddleware
@@ -75,12 +76,14 @@ app.include_router(Gravitation_Router, prefix="/gravitation")
 
 # Waves Route
 app.include_router(Waves_Router, prefix="/waves")
-
 # Mechanics Route
 app.include_router(Mechanics_Router, prefix="/mechanics")
 
 # Fluid State Physics Route
 app.include_router(FluidStatePhysics_Router, prefix="/fluid-state-physics")
+
+# Errors Route
+app.include_router(Errors_Router, prefix="/errors")
 
 if __name__ == "__main__":
     port = int(getenv("PORT", 8000))
