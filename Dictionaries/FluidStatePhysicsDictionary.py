@@ -1,0 +1,16 @@
+FluidStatePhysicsDict = {
+    "hydrostatic_pressure": "The pressure exerted by a fluid at equilibrium at a given point within the fluid, due to the force of gravity.",
+    "surface_tension": "The tendency of liquid surfaces to shrink into the minimum surface area possible.",
+    "capillary_pressure": "The pressure difference between two immiscible fluids in a narrow tube, resulting from the interaction of forces between the fluids and the tube walls.",
+    "bernoullis_equation": "A statement of the conservation of energy in a moving fluid, which shows that a decrease in pressure is associated with an increase in velocity.",
+    "poiseuilles_law": "An equation that describes the viscous flow of a fluid through a narrow tube, relating the flow rate to the pressure gradient, viscosity, and tube dimensions.",
+    "reynolds_number": "A dimensionless quantity used to predict the flow patterns of a fluid, indicating whether the flow is laminar or turbulent.",
+    "stokes_law": "An equation that describes the drag force on a sphere moving through a viscous fluid, which is proportional to the velocity and viscosity of the fluid.",
+    "mach_number": "A dimensionless quantity representing the ratio of the speed of an object moving through a fluid to the local speed of sound in that fluid.",
+    "compressibility_factor": "A measure of the deviation of a real gas from ideal gas behavior, defined as the ratio of the actual volume to the volume predicted by the ideal gas law.",
+    "boyles_law": "A gas law stating that the pressure and volume of a gas have an inverse relationship, when temperature is held constant.",
+    "charles_law": "A gas law stating that the volume of a gas is directly proportional to its absolute temperature, when pressure is held constant.",
+    "gaylussacs_law": "A gas law stating that the pressure of a gas is directly proportional to its absolute temperature, when volume is held constant.",
+    "avogadros_law": "A gas law stating that the volume of a gas is directly proportional to the number of moles of gas, when temperature and pressure are held constant.",
+    "ideal_gas_law": "An equation of state that describes the behavior of an ideal gas, relating the pressure, volume, temperature, and number of moles of the gas.",
+}
